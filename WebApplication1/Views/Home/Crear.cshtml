@@ -1,0 +1,53 @@
+﻿@model WebApplication1.Models.Productos
+@{
+    ViewData["Title"] = "Agregar producto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<h3 class="text-center">Agregar producto</h3>
+<form method="post" asp-action="Crear">
+    <div class="row">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-12 mt-4">
+            <div class="row">
+                <div class="col-4">
+                    <label asp-for="NombreArticulo">Nombre</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="NombreArticulo" class="form-control" />
+                    <span asp-validation-for="NombreArticulo" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label asp-for="Color"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Color" class="form-control" />
+                    <span asp-validation-for="Color" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label asp-for="Descripcion">Descripción</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Descripcion" class="form-control" />
+                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-3">
+            <a asp-action="Index">Volver atrás</a>
+        </div>
+        <div class="col-5 offset-4">
+            <button type="submit" class="btn btn-primary form-control">Crear</button>
+            &nbsp;
+        </div>
+    </div>
+</form>

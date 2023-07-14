@@ -1,0 +1,5 @@
+administrador@gmail.com 
+vendedor@gmail.com
+empleado@gmail.com
+
+Contraseña: 123
